@@ -183,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
         tis2.setTextColor(Color.BLACK);
         TextView dyeR =(TextView) findViewById(R.id.dyeR);
         dyeR.setText("-");
+        dyeR.setTextColor(Color.BLACK);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
