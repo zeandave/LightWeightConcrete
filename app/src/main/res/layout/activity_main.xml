@@ -363,24 +363,49 @@
 
     </GridLayout>
 
-    <Button
-        android:id="@+id/button"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="143dp"
+    <GridLayout
+        android:id="@+id/gridLay3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorAccent"
-        android:elevation="0dp"
-        android:onClick="calCu"
-        android:text="@string/cal"
-        android:textColor="@android:color/background_light"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/gridLay2"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:columnCount="2"
+        android:rowCount="1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLay" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginRight="20dp"
+            android:layout_row="0"
+            android:background="@color/colorAccent"
+            android:onClick="calCu"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/cal"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/Clear"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginLeft="20dp"
+            android:layout_row="0"
+            android:background="@color/colorAccent"
+            android:onClick="clearCu"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/clear"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light" />
+    </GridLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -151,6 +152,38 @@ public class MainActivity extends AppCompatActivity {
         double water = waterR(view);
         classy(view,density,comPress,water);
         }
+    private void clearForm(ViewGroup group)
+    {
+        for (int i = 0, count = group.getChildCount(); i < count; ++i) {
+            View view = group.getChildAt(i);
+            if (view instanceof EditText) {
+                ((EditText)view).setText("");
+            }
+
+            if(view instanceof ViewGroup && (((ViewGroup)view).getChildCount() > 0))
+                clearForm((ViewGroup)view);
+        }
+    }
+    public void clearCu(View view){
+        clearForm((ViewGroup) findViewById(R.id.gridLay));
+        TextView comR = (TextView) findViewById(R.id.comR);
+        comR.setText("-");
+        comR.setTextColor(Color.BLACK);
+        TextView waterR = (TextView) findViewById(R.id.waterR);
+        waterR.setText("-");
+        waterR.setTextColor(Color.BLACK);
+        TextView cR = (TextView) findViewById(R.id.cR);
+        cR.setText("-");
+        cR.setTextColor(Color.BLACK);
+        TextView tis1 = (TextView) findViewById(R.id.tis1);
+        tis1.setText("-");
+        tis1.setTextColor(Color.BLACK);
+        TextView tis2 = (TextView) findViewById(R.id.tis2);
+        tis2.setText("-");
+        tis2.setTextColor(Color.BLACK);
+        TextView dyeR =(TextView) findViewById(R.id.dyeR);
+        dyeR.setText("-");
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

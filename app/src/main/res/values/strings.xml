@@ -16,6 +16,8 @@
     <string name="pass">Pass</string>
     <string name="notpass">Not Pass</string>
     <string name="cal">Calculate</string>
+    <string name="clear">Clear</string>
+
 
 
 </resources>
