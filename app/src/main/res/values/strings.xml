@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Light Weight Concrete</string>
+    <string name="com">Strength(MPa): </string>
+    <string name="water">Water absorption: </string>
+    <string name="max_1">Max Load</string>
+    <string name="den">น้ำหนักหลังอบ</string>
+    <string name="den2">4 hours</string>
+    <string name="den3">แช่ 24 hours</string>
+    <string name="num_1">1</string>
+    <string name="num_2">2</string>
+    <string name="num_3">3</string>
+    <string name="dry">Density(kg/m<sup><small>3</small></sup>): </string>
+    <string name="class_tis">Class: </string>
+    <string name="water_tis">TIS Water: </string>
+    <string name="com_tis">TIS Strength: </string>
+    <string name="pass">Pass</string>
+    <string name="notpass">Not Pass</string>
+    <string name="cal">Calculate</string>
+
+
+</resources>
