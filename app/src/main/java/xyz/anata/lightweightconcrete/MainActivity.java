@@ -1,10 +1,13 @@
 package xyz.anata.lightweightconcrete;
 
+import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -151,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
         double density = densityS(view);
         double water = waterR(view);
         classy(view,density,comPress,water);
+        hideSoftKeyboard(this);
         }
     private void clearForm(ViewGroup group)
     {
@@ -184,10 +188,18 @@ public class MainActivity extends AppCompatActivity {
         TextView dyeR =(TextView) findViewById(R.id.dyeR);
         dyeR.setText("-");
         dyeR.setTextColor(Color.BLACK);
+        hideSoftKeyboard(this);
+    }
+    public static void hideSoftKeyboard(Activity activity) {
+        InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(
+                        Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(
+                activity.getCurrentFocus().getWindowToken(), 0);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 }
